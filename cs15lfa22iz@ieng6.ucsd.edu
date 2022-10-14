@@ -24,7 +24,7 @@ class Handler implements URLHandler {
                 }
                 if (parameters[0].equals("s")) {
                     listStrings.add(parameters[1]);
-                    return "Added: "+parameters[1];
+                    return "added "+parameters[1];
                 }
             }
             else if (url.getPath().contains("/search")){
@@ -42,8 +42,6 @@ class Handler implements URLHandler {
             return "404 Not Found!";
         }
     }
-}
-    
 
 class SearchEngine {
     public static void main(String[] args) throws IOException {
@@ -56,4 +54,5 @@ class SearchEngine {
 
         Server.start(port, new Handler());
     }
+}
 }
